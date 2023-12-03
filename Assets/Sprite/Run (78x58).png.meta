@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 04900b37bdca99f43af2572b799312eb
+guid: a8022b4320a7f8d4b82500b3443858f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle (78x58).png_0
+      name: Run (78x58)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd4d40ff32db9854e9c8e46893291d36
-      internalID: 578536147
+      spriteID: 74890c9e7df486547803afc79a8ee909
+      internalID: -827299786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_1
+      name: Run (78x58)_1
       rect:
         serializedVersion: 2
         x: 78
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc4187f76732a664b8c383acdb516eae
-      internalID: -2084221909
+      spriteID: a75c558cfb03c0841ad8283c1091bcde
+      internalID: 2131172457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_2
+      name: Run (78x58)_2
       rect:
         serializedVersion: 2
         x: 156
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 115d3d589e83cd0419c61917391a44ef
-      internalID: 435155746
+      spriteID: ba87c4944d25c7b4bb8bcf2896c2aabe
+      internalID: 810274013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_3
+      name: Run (78x58)_3
       rect:
         serializedVersion: 2
         x: 234
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98565de2702ae2f4c87c51f480bee2af
-      internalID: -1038453882
+      spriteID: c491dc3e3f79ae147a7116719babc3be
+      internalID: 1453297101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_4
+      name: Run (78x58)_4
       rect:
         serializedVersion: 2
         x: 312
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3ef27f33f20a9d448409c349bcf51b5
-      internalID: 697037645
+      spriteID: ad73aece61dfa3947b9325434ab306b2
+      internalID: -1169775229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_5
+      name: Run (78x58)_5
       rect:
         serializedVersion: 2
         x: 390
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afaf6c66ea97c264bb6a5af6afb24b6a
-      internalID: -1407004271
+      spriteID: fb02a1e5fa4ea0547bbf85d8b55cfb76
+      internalID: 1647095364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_6
+      name: Run (78x58)_6
       rect:
         serializedVersion: 2
         x: 468
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75fe56c3f5deafd4b9b4a984b66d770d
-      internalID: -1469399464
+      spriteID: 39e53d5126de7114da6f64a7dbafecbe
+      internalID: 1380292145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (78x58).png_7
+      name: Run (78x58)_7
       rect:
         serializedVersion: 2
         x: 546
@@ -271,71 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15e4c95b070f0bf4e9f56bf5ac5b4083
-      internalID: 2053270881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (78x58).png_8
-      rect:
-        serializedVersion: 2
-        x: 624
-        y: 0
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3e94233104e61643a14f318daf778e5
-      internalID: 681915506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (78x58).png_9
-      rect:
-        serializedVersion: 2
-        x: 702
-        y: 0
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b636790c48f197c4aa4f083149e8c427
-      internalID: 365141397
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle (78x58).png_10
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 0
-        width: 58
-        height: 58
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6bbf2933ef872841ba9e486397b73be
-      internalID: 376387923
+      spriteID: 67e50fe660609f94290c802df5c561e1
+      internalID: 838305245
       vertices: []
       indices: 
       edges: []
@@ -351,17 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle (78x58).png_0: 578536147
-      Idle (78x58).png_1: -2084221909
-      Idle (78x58).png_10: 376387923
-      Idle (78x58).png_2: 435155746
-      Idle (78x58).png_3: -1038453882
-      Idle (78x58).png_4: 697037645
-      Idle (78x58).png_5: -1407004271
-      Idle (78x58).png_6: -1469399464
-      Idle (78x58).png_7: 2053270881
-      Idle (78x58).png_8: 681915506
-      Idle (78x58).png_9: 365141397
+      Run (78x58)_0: -827299786
+      Run (78x58)_1: 2131172457
+      Run (78x58)_2: 810274013
+      Run (78x58)_3: 1453297101
+      Run (78x58)_4: -1169775229
+      Run (78x58)_5: 1647095364
+      Run (78x58)_6: 1380292145
+      Run (78x58)_7: 838305245
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
