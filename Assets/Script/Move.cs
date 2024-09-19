@@ -34,7 +34,6 @@ public class Move : MonoBehaviour
     {
         _run();
         _jump();
-        _climb();
     }
 
     // Isi kode untuk lompat
@@ -50,27 +49,6 @@ public class Move : MonoBehaviour
             rb.velocity = jumpVelocity;
         }
         
-    }
-
-    // Isi kode untuk manjat (gak digunain, soalnya mengganggu gameplay)
-    private void _climb()
-    {
-        if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Climb")))
-        {
-            float climb = CrossPlatformInputManager.GetAxis("Jump");
-
-            Vector2 climbingVelocity = new Vector2(rb.velocity.x, climb * climbSpeed);
-            rb.velocity = climbingVelocity;
-
-            anim.SetBool("Climbing", true);
-
-            rb.gravityScale = 0f;
-        }
-        else
-        {
-            anim.SetBool("Climbing", false);
-            rb.gravityScale = _gravityScale;
-        }
     }
 
     // Isi kode buat lari
