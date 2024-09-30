@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Ground
   - World Confiner
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Climb
     uniqueID: 2936593821
+    locked: 0
+  - name: Enemy
+    uniqueID: 3893451167
     locked: 0
   - name: Player
     uniqueID: 3069007051
