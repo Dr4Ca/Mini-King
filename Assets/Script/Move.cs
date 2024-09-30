@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
     BoxCollider2D boxCollider;
     PolygonCollider2D playerFeet;
 
-    [SerializeField] float movementSpeed; 
+    [SerializeField] float maxSpeed;
     [SerializeField] float jumpSpeed;
     [SerializeField] float climbSpeed;
 
@@ -48,7 +48,7 @@ public class Move : MonoBehaviour
             Vector2 jumpVelocity = new Vector2(rb.velocity.x, jumpSpeed);
             rb.velocity = jumpVelocity;
         }
-        
+
     }
 
     // Isi kode buat lari
@@ -56,9 +56,9 @@ public class Move : MonoBehaviour
     {
         float move = CrossPlatformInputManager.GetAxis("Horizontal");
 
-        Vector2 playerVelovity = new Vector2(move * movementSpeed, rb.velocity.y);
+        Vector2 playerVelovity = new Vector2(move * maxSpeed, rb.velocity.y);
         rb.velocity = playerVelovity;
-        
+
         _flip();
         _runAnim();
     }
