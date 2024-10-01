@@ -14,9 +14,11 @@ public class Move : MonoBehaviour
 
     [SerializeField] float maxSpeed;
     [SerializeField] float jumpSpeed;
-    [SerializeField] float climbSpeed;
+    float climbSpeed;
+    [SerializeField] Vector2 hitKick = new Vector2(50f, 50f);
 
     float _gravityScale;
+    bool isHitted;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +34,33 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _run();
-        _jump();
+        if (!isHitted)
+        {
+            _run();
+            _jump();
+
+            if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+            {
+                _playerHit();
+            }
+        }
+    }
+
+    private void _playerHit()
+    {
+        rb.velocity = hitKick * new Vector2(-transform.localScale.x, 1f);
+
+        anim.SetTrigger("Hitted");
+        isHitted = true;
+
+        StartCoroutine(stopHit());
+    }
+
+    IEnumerator stopHit()
+    {
+        yield return new WaitForSeconds(1f);
+
+        isHitted = false;
     }
 
     // Isi kode untuk lompat
