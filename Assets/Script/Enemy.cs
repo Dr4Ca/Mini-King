@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] float _runSpeed;
+    [SerializeField] float _runSpeed; //Kecepatan si musuh
 
     Rigidbody2D rb;
     Collider2D col;
