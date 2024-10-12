@@ -46,7 +46,7 @@ public class Move : MonoBehaviour
         }
     }
 
-    private void _playerHit()
+    public void _playerHit()
     {
         rb.velocity = hitKick * new Vector2(-transform.localScale.x, 1f);
 
@@ -62,6 +62,7 @@ public class Move : MonoBehaviour
 
         isHitted = false;
     }
+
 
     // Isi kode untuk lompat
     private void _jump()
