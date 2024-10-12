@@ -43424,6 +43424,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1548949589499620606, guid: 96ccb354e29c50e4d8974e67dde8025a, type: 3}
+      propertyPath: explosionForce
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548949589499620606, guid: 96ccb354e29c50e4d8974e67dde8025a, type: 3}
+      propertyPath: explosionForce.x
+      value: 7000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548949589499620606, guid: 96ccb354e29c50e4d8974e67dde8025a, type: 3}
+      propertyPath: explosionForce.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3743505556469948883, guid: 96ccb354e29c50e4d8974e67dde8025a, type: 3}
       propertyPath: m_Name
       value: Bomb
@@ -43446,20 +43458,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1645003663463825255, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
-      propertyPath: accel
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1645003663463825255, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
-      propertyPath: maxSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1645003663463825255, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
-      propertyPath: hitKick.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1645003663463825255, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
-      propertyPath: hitKick.y
-      value: 12
+      propertyPath: attackRadius
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 5385473652002905210, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43500,6 +43500,14 @@ PrefabInstance:
     - target: {fileID: 5385473652002905210, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399555646448936093, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399555646448936093, guid: a5391327b1ef66a4aaa6bb1ff4634121, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

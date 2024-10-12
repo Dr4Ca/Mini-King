@@ -12,10 +12,17 @@ public class Move : MonoBehaviour
     BoxCollider2D boxCollider;
     PolygonCollider2D playerFeet;
 
+    // Gerak Motorik
     [SerializeField] float maxSpeed;
     [SerializeField] float jumpSpeed;
     float climbSpeed;
+
+    // Impact
     [SerializeField] Vector2 hitKick = new Vector2(50f, 50f);
+
+    // Serang
+    [SerializeField] Transform hurtBox;
+    [SerializeField] float attackRadius = 3f;
 
     float _gravityScale;
     bool isHitted;
@@ -29,6 +36,11 @@ public class Move : MonoBehaviour
         playerFeet = GetComponent<PolygonCollider2D>();
 
         _gravityScale = rb.gravityScale;
+
+        // Kursor
+        Cursor.visible = false; // Hilangin kursor
+        Cursor.lockState = CursorLockMode.Locked; // Kunci posisi kursor pas ditengah monitor
+
     }
 
     // Update is called once per frame
@@ -38,6 +50,7 @@ public class Move : MonoBehaviour
         {
             _run();
             _jump();
+            _attack();
 
             if (boxCollider.IsTouchingLayers(LayerMask.GetMask("Enemy")))
             {
@@ -46,7 +59,21 @@ public class Move : MonoBehaviour
         }
     }
 
-    private void _playerHit()
+    private void _attack()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Fire1"))
+        {
+            anim.SetTrigger("Attacking");
+            Collider2D[] enemiesToHit = Physics2D.OverlapCircleAll(hurtBox.position, attackRadius, LayerMask.GetMask("Enemy"));
+
+            foreach(Collider2D enemy in enemiesToHit)
+            {
+                print("Musuh di-hit");
+            }
+        }
+    }
+
+    public void _playerHit()
     {
         rb.velocity = hitKick * new Vector2(-transform.localScale.x, 1f);
 
@@ -62,6 +89,7 @@ public class Move : MonoBehaviour
 
         isHitted = false;
     }
+
 
     // Isi kode untuk lompat
     private void _jump()
@@ -107,4 +135,10 @@ public class Move : MonoBehaviour
         bool runningHorizontal = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
         anim.SetBool("Running", runningHorizontal);
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(hurtBox.position, attackRadius);
+    }
+
 }
