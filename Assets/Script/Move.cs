@@ -68,7 +68,8 @@ public class Move : MonoBehaviour
 
             foreach(Collider2D enemy in enemiesToHit)
             {
-                print("Musuh di-hit");
+                enemy.GetComponent<Enemy>().Dying();
+                print("Ngehit enemy");
             }
         }
     }
