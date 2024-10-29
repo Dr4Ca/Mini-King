@@ -93,6 +93,8 @@ public class Move : MonoBehaviour
         anim.SetTrigger("Hitted");
         isHitted = true;
 
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
+
         StartCoroutine(stopHit());
     }
 
