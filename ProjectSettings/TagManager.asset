@@ -14,7 +14,7 @@ TagManager:
   - Ground
   - World Confiner
   - Enemy
-  - 
+  - Interactable
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Bomb
     uniqueID: 884571753
+    locked: 0
+  - name: Interactable
+    uniqueID: 2389066839
     locked: 0
   - name: Player
     uniqueID: 3069007051

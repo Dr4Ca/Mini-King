@@ -56,7 +56,21 @@ public class Move : MonoBehaviour
             {
                 _playerHit();
             }
+
+            ExitLevel();
         }
+    }
+
+    private void ExitLevel()
+    {
+        if (!boxCollider.IsTouchingLayers(LayerMask.GetMask("Interactable"))) { return; }
+
+        if (CrossPlatformInputManager.GetButtonDown("Vertical"))
+        {
+            FindObjectOfType<ExitDoor>().StartLoadingNextLevel();
+            print("Detected");
+        }
+
     }
 
     private void _attack()
