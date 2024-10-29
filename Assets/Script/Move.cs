@@ -37,9 +37,7 @@ public class Move : MonoBehaviour
 
         _gravityScale = rb.gravityScale;
 
-        // Kursor
-        Cursor.visible = false; // Hilangin kursor
-        Cursor.lockState = CursorLockMode.Locked; // Kunci posisi kursor pas ditengah monitor
+        
 
     }
 
