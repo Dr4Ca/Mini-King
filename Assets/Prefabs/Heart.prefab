@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7fd5bced215a349836a48e60367a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heartSFX: {fileID: 8300000, guid: 67789c03f97bf844980ea35211ea946f, type: 3}
 --- !u!95 &129433561857790572
 Animator:
   serializedVersion: 5
