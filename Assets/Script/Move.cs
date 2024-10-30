@@ -37,7 +37,7 @@ public class Move : MonoBehaviour
 
         _gravityScale = rb.gravityScale;
 
-        
+        anim.SetTrigger("Door Out");
 
     }
 
@@ -65,10 +65,20 @@ public class Move : MonoBehaviour
 
         if (CrossPlatformInputManager.GetButtonDown("Vertical"))
         {
-            FindObjectOfType<ExitDoor>().StartLoadingNextLevel();
-            print("Detected");
+            anim.SetTrigger("Door In");
         }
 
+    }
+
+    public void LoadNextLevel()
+    {
+        FindObjectOfType<ExitDoor>().StartLoadingNextLevel();
+        TurnOffRendered();
+    }
+
+    public void TurnOffRendered()
+    {
+        GetComponent<Renderer>().enabled = false;
     }
 
     private void _attack()
