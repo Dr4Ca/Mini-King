@@ -167,3 +167,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   explosionForce: 99
+  explodeSFX: {fileID: 8300000, guid: 1b8d5d9fb03343a4b8fac36c47241fb6, type: 3}
+  burningSFX: {fileID: 8300000, guid: cb8624304c8a7c142a25dc17bba7a35c, type: 3}

@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73fb994437225346a91959881277a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyDieSFX: {fileID: 8300000, guid: aa2b2c932be808047984b4f0adaf4128, type: 3}
   _runSpeed: 2
 --- !u!61 &1254235151558409959
 BoxCollider2D:

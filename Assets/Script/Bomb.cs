@@ -7,6 +7,8 @@ public class Bomb : MonoBehaviour
 {
     [SerializeField] float radius = 3f;
     [SerializeField] float explosionForce = 100f;
+    [SerializeField] AudioClip explodeSFX;
+    [SerializeField] AudioClip burningSFX;
 
     BoxCollider2D col;
     Animator anim;
@@ -45,6 +47,7 @@ public class Bomb : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         anim.SetTrigger("Burning");
+        AudioSource.PlayClipAtPoint(burningSFX, Camera.main.transform.position);
     }
 
     private void DestroyBomb()
@@ -55,5 +58,10 @@ public class Bomb : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, radius);
+    }
+
+    public void bombExplodeSFX()
+    {
+        AudioSource.PlayClipAtPoint(explodeSFX, Camera.main.transform.position);
     }
 }

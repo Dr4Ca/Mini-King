@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] AudioClip EnemyDieSFX;
 
     [SerializeField] float _runSpeed; //Kecepatan si musuh
 
@@ -28,9 +29,10 @@ public class Enemy : MonoBehaviour
     public void Dying()
     {
         anim.SetTrigger("Die");
+        rb.bodyType = RigidbodyType2D.Static;
+
         GetComponent<CapsuleCollider2D>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
-        rb.bodyType = RigidbodyType2D.Static;
 
         StartCoroutine(EnemyGone());
     }
@@ -67,5 +69,10 @@ public class Enemy : MonoBehaviour
     private bool isFacingLeft()
     {
         return transform.localScale.x > 0f;
+    }
+
+    void PlayerDyingSFX()
+    {
+        AudioSource.PlayClipAtPoint(EnemyDieSFX, Camera.main.transform.position);
     }
 }

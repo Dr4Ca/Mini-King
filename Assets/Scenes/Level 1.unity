@@ -64412,6 +64412,10 @@ MonoBehaviour:
     m_ParentHash: 756556552
   - m_Hash: 1130333774
     m_ParentHash: 756556552
+  - m_Hash: 1391748711
+    m_ParentHash: 756556552
+  - m_Hash: -78254819
+    m_ParentHash: 756556552
 --- !u!4 &1280359649
 Transform:
   m_ObjectHideFlags: 0
@@ -65265,6 +65269,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameSession
       objectReference: {fileID: 0}
+    - target: {fileID: 6126262277317967773, guid: 0802b86027483c54098f263693826eea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126262277317967773, guid: 0802b86027483c54098f263693826eea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 8557194881085588612, guid: 0802b86027483c54098f263693826eea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.34463
@@ -65306,8 +65318,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6389044882185600464, guid: 0802b86027483c54098f263693826eea, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0802b86027483c54098f263693826eea, type: 3}

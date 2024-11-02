@@ -11,6 +11,7 @@ public class Move : MonoBehaviour
     Animator anim;
     BoxCollider2D boxCollider;
     PolygonCollider2D playerFeet;
+    AudioSource audioSource;
 
     // Gerak Motorik
     [SerializeField] float maxSpeed;
@@ -24,6 +25,9 @@ public class Move : MonoBehaviour
     [SerializeField] Transform hurtBox;
     [SerializeField] float attackRadius = 3f;
 
+    //SFX
+    [SerializeField] AudioClip jumpingSFX, attackSFX, walkSFX, hittedSFX;
+
     float _gravityScale;
     bool isHitted;
 
@@ -34,6 +38,7 @@ public class Move : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         playerFeet = GetComponent<PolygonCollider2D>();
+        audioSource = GetComponent<AudioSource>();
 
         _gravityScale = rb.gravityScale;
 
@@ -86,12 +91,13 @@ public class Move : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("Attacking");
+            audioSource.PlayOneShot(attackSFX);
+
             Collider2D[] enemiesToHit = Physics2D.OverlapCircleAll(hurtBox.position, attackRadius, LayerMask.GetMask("Enemy"));
 
             foreach(Collider2D enemy in enemiesToHit)
             {
                 enemy.GetComponent<Enemy>().Dying();
-                print("Ngehit enemy");
             }
         }
     }
@@ -102,6 +108,7 @@ public class Move : MonoBehaviour
 
         anim.SetTrigger("Hitted");
         isHitted = true;
+        audioSource.PlayOneShot(hittedSFX);
 
         FindObjectOfType<GameSession>().ProcessPlayerDeath();
 
@@ -127,6 +134,8 @@ public class Move : MonoBehaviour
         {
             Vector2 jumpVelocity = new Vector2(rb.velocity.x, jumpSpeed);
             rb.velocity = jumpVelocity;
+
+            audioSource.PlayOneShot(jumpingSFX);
         }
 
     }
@@ -141,6 +150,8 @@ public class Move : MonoBehaviour
 
         _flip();
         _runAnim();
+        PlayWalkSFX();
+
     }
 
     // Kode buat nge flip player, kalo dia nengok kanan-kiri
@@ -164,6 +175,22 @@ public class Move : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(hurtBox.position, attackRadius);
+    }
+
+    void PlayWalkSFX()
+    {
+        bool isMoving = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
+
+        // Memainkan atau menghentikan suara berdasarkan pergerakan
+        if (isMoving && !audioSource.isPlaying)
+        {
+            audioSource.clip = walkSFX;
+            audioSource.Play();
+        }
+        else if (!isMoving && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 
 }
